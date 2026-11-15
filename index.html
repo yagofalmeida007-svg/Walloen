@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Halloween!</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="fontawesome-free-7.3.1-web/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <style>
+        body {
+            background-color: #12051f;
+            color: #f5f5f5;
+        }
+
+        .navbar {
+            border-bottom: 2px solid #ff7518;
+        }
+
+        .card {
+            background-color: #21102f;
+            color: white;
+            border: 1px solid #6f2dbd;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-title {
+            color: #ff7518 !important;
+        }
+
+        .accordion-item {
+            background-color: #21102f;
+            color: white;
+            border-color: #6f2dbd;
+        }
+
+        .accordion-button {
+            background-color: #2d1540;
+            color: #ff7518;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #6f2dbd;
+            color: white;
+        }
+
+        .modal-content {
+            background-color: #21102f;
+            color: white;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid #6f2dbd;
+        }
+
+        .modal-footer {
+            border-top: 1px solid #6f2dbd;
+        }
+
+        .titulo-halloween {
+            color: #ff7518;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .galeria-btn {
+            background-color: #ff7518;
+            border: none;
+            color: white;
+        }
+
+        .galeria-btn:hover {
+            background-color: #d95d00;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-ghost"></i> Feliz Halloween!
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://fisk.com.br/blog/a-historia-do-halloween-conheca-a-sua-origem">
+                            <i class="fa-solid fa-thumbs-up"></i> A História
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://halloweencolegioobjetivo.weebly.com/mitos-e-lendas.html">
+                            <i class="fa-solid fa-skull"></i> Lendas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://halloween.fandom.com/wiki/Category:Creatures">
+                            <i class="fa-solid fa-skull-crossbones"></i> Criaturas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.abrakadabra.com.br/adulto/halloween">
+                            <i class="fa-solid fa-mask"></i> Fantasias
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.rizzoconfeitaria.com.br/doces-para-festa-halloween">
+                            <i class="fa-solid fa-cake-candles"></i> Doces
+                        </a>
+                    </li>
+
+                    <!-- GALERIA -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">
+                            <i class="fa-solid fa-images"></i> Galeria
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            Halloween
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="#">História</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">Lendas</a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="galeria.html">Galeria</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+                <form class="d-flex" role="search">
+
+                    <input class="form-control me-2" type="search" 
+                    placeholder="Pesquisar" aria-label="Search"/>
+
+                    <button class="btn btn-outline-warning" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <!-- ALERT -->
+        <div class="alert alert-warning text-center my-4" role="alert">
+            🎃 <strong>Atenção!</strong> O Halloween está chegando! 
+            Prepare sua fantasia e seus doces! 👻
+        </div>
+
+
+        <!-- CAROUSEL -->
+        <div class="row my-5">
+
+            <div class="col-lg-12">
+
+                <div id="carouselExampleAutoplaying" class="carousel slide" 
+                data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="img/halo.png" class="d-block w-100" alt="Halloween">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/eita.png" class="d-block w-100" alt="Halloween">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/fantasmas.png" class="d-block w-100" alt="Fantasmas">
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" 
+                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"></span>
+
+                    </button>
+
+                    <button class="carousel-control-next" type="button" 
+                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <h2 class="text-center titulo-halloween mb-4">
+            👻 Mundo do Halloween 🎃
+        </h2>
+
+
+        <!-- PRIMEIROS 3 CARDS -->
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100">
+
+                    <img src="img/halo.png" class="card-img-top" alt="Halloween">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            🎃 Como surgiu o Halloween?
+                            <span class="badge text-bg-warning">História</span>
+                        </h5>
+
+                        <p class="card-text">
+                            O Halloween possui uma história que remonta a antigas 
+                            tradições europeias. Ao longo dos séculos, a celebração 
+                            passou por diversas transformações até se tornar a festa 
+                            conhecida atualmente.
+                        </p>
+
+                        <a href="https://www.editorawish.com.br/blogs/novidades/como-surgiu-o-halloween"
+                        class="btn btn-danger">
+                            Saiba mais
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100">
+
+                    <img src="img/eita.png" class="card-img-top" alt="Criaturas">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            🧛 Criaturas assustadoras
+                            <span class="badge text-bg-danger">Terror</span>
+                        </h5>
+
+                        <p class="card-text">
+                            Vampiros, lobisomens, fantasmas, bruxas e zumbis são 
+                            algumas das criaturas mais associadas ao Halloween.
+                            Descubra suas histórias e origens.
+                        </p>
+
+                        <a href="https://www.divessi.com/br/blog/halloween-scary-ocean-creatures-9398.html"
+                        class="btn btn-danger">
+                            Conheça as criaturas
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100">
+
+                    <img src="img/fantasmas.png" class="card-img-top" alt="Fantasmas">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            👻 Lendas assustadoras
+                            <span class="badge text-bg-dark">Lendas</span>
+                        </h5>
+
+                        <p class="card-text">
+                            O Halloween é cercado por histórias de fantasmas,
+                            bruxas e criaturas misteriosas que atravessaram
+                            gerações.
+                        </p>
+
+                        <a href="https://www.animativa.com/pt-br/blog/10-lendas-brasileiras-de-terror/"
+                        class="btn btn-danger">
+                            Ver lendas
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--CARD 4 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100">
+
+                    <img src="img/aboboras.jpg" class="card-img-top" alt="Abóbora">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            🎃 Abóboras de Halloween
+                            <span class="badge text-bg-warning">Tradição</span>
+                        </h5>
+
+                        <p class="card-text">
+                            As famosas abóboras iluminadas são um dos maiores
+                            símbolos do Halloween. Elas costumam ser decoradas
+                            com rostos assustadores e iluminadas durante a noite.
+                        </p>
+
+                        <a href="https://br.pinterest.com/pin/699324648395581079/" class="btn btn-danger">
+                            Descubra mais
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--CARD 5 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100">
+
+                    <img src="img/fantasias.webp" class="card-img-top" alt="Fantasia">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            🧙 Fantasias
+                            <span class="badge text-bg-primary">Diversão</span>
+                        </h5>
+
+                        <p class="card-text">
+                            Bruxas, vampiros, fantasmas e monstros são algumas
+                            das fantasias mais populares. A criatividade é uma
+                            das principais características dessa tradição.
+                        </p>
+
+                        <a href="https://www.maxfesta.com.br/halloween/fantasia-halloween-feminina/?srsltid=AU7gw4VwJArtBv79M57adk4voPYvXUuuba5ob0_BLRxlOG8aookI6bso" class="btn btn-danger">
+                            Ver fantasias
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 6 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100">
+
+                    <img src="img/doces.png" class="card-img-top" alt="Doces">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            🍬 Doces ou travessuras?
+                            <span class="badge text-bg-success">Doces</span>
+                        </h5>
+
+                        <p class="card-text">
+                            A famosa tradição de pedir doces durante o Halloween
+                            é conhecida pela frase "doces ou travessuras".
+                            Crianças costumam visitar casas usando fantasias.
+                        </p>
+
+                        <a href="https://www.lojasadoce.com.br/kit-10-pacotes-de-doces-ou-travessuras-para-halloween?srsltid=AU7gw4WTf_0JERSR6VbetrBv0q63nJYrYP-sSAn1HWPZkhXxgy9SoyAq" class="btn btn-danger">
+                            Saiba mais
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTÃO GALERIA -->
+
+        <div class="text-center my-5">
+
+            <h2 class="titulo-halloween">
+                📸 Confira nossa galeria
+            </h2>
+
+            <p>
+                Veja todas as imagens utilizadas no site.
+            </p>
+
+            <a href="galeria.html" class="btn galeria-btn btn-lg">
+                <i class="fa-solid fa-images"></i>
+                Abrir Galeria
+            </a>
+
+        </div>
+
+
+        <!-- ACCORDION + MODAL -->
+
+        <div class="row my-5">
+
+            <div class="col-lg-8">
+
+                <div class="text-center">
+
+                    <h3 class="titulo-halloween">
+                        🎃 Curiosidade do Halloween
+                    </h3>
+
+                    <p>
+                        Quer descobrir uma curiosidade sobre o Halloween?
+                    </p>
+
+                    <button type="button" class="btn btn-warning"
+                    data-bs-toggle="modal" data-bs-target="#modalHalloween">
+
+                        Descobrir curiosidade
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="accordion" id="accordionExample">
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne">
+
+                                🎃 Origem do Halloween
+
+                            </button>
+
+                        </h2>
+
+                        <div id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
+
+                            <div class="accordion-body">
+
+                                O Halloween possui uma longa história e passou
+                                por diversas transformações ao longo dos séculos.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">
+
+                                👻 Fantasmas e lendas
+
+                            </button>
+
+                        </h2>
+
+                        <div id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample">
+
+                            <div class="accordion-body">
+
+                                Fantasmas, bruxas e outras criaturas aparecem
+                                frequentemente nas histórias relacionadas ao Halloween.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree">
+
+                                🍬 Doces e fantasias
+
+                            </button>
+
+                        </h2>
+
+                        <div id="collapseThree"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionExample">
+
+                            <div class="accordion-body">
+
+                                Doces e fantasias são alguns dos elementos
+                                mais conhecidos das comemorações de Halloween.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL -->
+
+    <div class="modal fade" id="modalHalloween"
+    tabindex="-1"
+    aria-labelledby="modalHalloweenLabel"
+    aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h1 class="modal-title fs-5" id="modalHalloweenLabel">
+                        🎃 Você sabia?
+                    </h1>
+
+                    <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Fechar">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    O Halloween é tradicionalmente comemorado no dia 31 de outubro.
+                    A data é marcada por fantasias, doces, decorações e histórias
+                    relacionadas ao terror e ao sobrenatural.
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                    class="btn btn-dark"
+                    data-bs-dismiss="modal">
+
+                        Fechar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+</html>
